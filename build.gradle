@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.6.RELEASE'
+	id 'groovy'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.testezaooo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.springframework.data', name: 'spring-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.codehaus.groovy:groovy'
+	runtimeOnly 'mysql:mysql-connector-java'
+	compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.13.1'
+	compile group: 'com.itextpdf', name: 'layout'
+	compile group: 'com.itextpdf', name: 'html2pdf', version: '2.1.4'
+	compile "org.xhtmlrenderer:core-renderer:R8"
+	compile group: 'com.itextpdf', name: 'kernel'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile("com.lowagie:itext:2.0.8")
+}
